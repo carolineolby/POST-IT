@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main>
+        <div class="Container">
+            <form class="Form__Todo" action="/add" method="POST">
+                <h1> T O D O </h1>
+                <h2>#Add New Posts</h2>
+                <input type="text" name="title" placeholder="Subject">
+                <textarea type="text" name="content"></textarea>
+                <input type="submit" value="add" placeholder="ADD">
+            </form>
+
+                <% 
+                    for (let i=0; i< notes.length;i++) { 
+                        const note = notes[i]
+                %>
+                    <div class="Note__Container">
+                        <article class="note">
+                            <h2 class="note__title"><%= note.title %></h2>
+                            <p class="note__content"><%= note.content %></p>
+                            <form class="Button__Delete" action="/delete/<%=note._id%>" method="POST">
+                                <input type="submit" value="#delete">
+                            </form>
+
+                            <button class="edit-btn"> EDIT </button>
+                            
+                            <form class="form__Update hidden" action="/update/<%= note._id%>" method="POST">
+                                <input name="updateTitle" type="text" class="note__title" value="<%= note.title %>">
+                                <textarea name="updateContent" class="note__content"> <%= note.content %> </textarea> 
+                                <input type="submit" value="#update"> 
+                            </form>
+                        </article>
+                    </div>
+
+                <% } %>
+            <form class="Button_LogOut" action="/logout" method="POST">
+                <input type="submit" value="#logout">
+            </form>
+        </div>  
+    </main>  
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #060f1c; 
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+}
+
+h1 {
+    font-size: 130px; 
+    color: #ffffff; 
+}
+
+h2 {
+    color: #ffffff; 
+    text-align: center;
+}
+
+p {
+    color: #b12c2c; 
+}
+
+/*POST-IT & TODO*/ 
+.Container {
+    display:grid; 
+    justify-content: center;
+}
+
+/* FORM - TODO */ 
+.Form__Todo {
+    display: flex; 
+    flex-direction: column;
+}
+
+.Error {
+    text-align: center;
+}
+
+.Note__Container {
+    display: flex; 
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 10px; 
+}
+article.note {
+    background: #ffffff; 
+    padding: 10px;
+    width: 500px; 
+    height: 200px; 
+    justify-content: center;
+}
+
+.note__title, .note__content {
+    color: #060f1c; 
+    text-align: center;
+}
+
+
+.note__title, .note__content, .hidden {
+    color: #060f1c; 
+    text-align: center;
+}
+
+
+
+.Form__Login {
+    text-align: center;
+}
+
+.Button__Delete {
+    text-align: center;
+}
+
+.Button_LogOut {
+    margin-top: 20px; 
+    text-align: center;
+}
+
+/*SIGN IN*/ 
+.Form__SignUp {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+input.Input__SignUp {
+    width: 50%; 
+    justify-content: center;
+}
+
+.Button__SignUp {
+    width: 50px;
+}
+
+
+/* HIDE */ 
+.hidden {
+    display: none; 
+}

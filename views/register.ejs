@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="Containter">
+        <form class="Form__SignUp" action="/signup" method="POST"> 
+            <h1> R E G I S T E R </h1>
+            <h2> #to create a todo</h2>
+            <% if(errorMessage) { %>
+                <p><%= errorMessage %></p>
+            <% } %> 
+            <input class="Input__SignUp" type="text" name="usename" placeholder="Usename" required>
+            <input class="Input__SignUp" type="text" name="password" placeholder="Password" required>
+            <input class="Input__SignUp" type="text" name="repeatpassword" placeholder="Repeat Password" required>
+            <input class="Button__SignUp" type="submit" value="signup">
+        </form>
+    </div>
+</body>
+</html>
